@@ -1,16 +1,6 @@
-server:
-  port: 8011
 spring:
-  application:
-    name: cart-service
-  config:
-    import: "optional:configserver:"
   main:
     allow-bean-definition-overriding: true
-  datasource:
-    url: jdbc:mysql://localhost:3306/whateverWithMe?useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 12341234
 eureka:
   instance:
     prefer-ip-address: true

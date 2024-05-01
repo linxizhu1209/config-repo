@@ -1,35 +1,4 @@
 spring:
-  jpa:
-    open-in-view: false
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-  data:
-    redis:
-      host: 127.0.0.1
-      port: 6379
-      password: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
-      repositories:
-        enabled: false
-#  jwt:
-#    secret: '{cipher}741ae6d415c9fd35d0e94529046e30b3e16c12c704490f707a72b8db35c980f7ab32722f4f9714f042e4c06f49882da0682721a5b87b835591c66050cf0d33a573fdb06868c14f204c6ca21c726118b2c2cc72ed7c3a554fc10de3eefdccf0366abc4edfc001575f20905bb20acb8064'
-#  default:
-#    admin_id: '{cipher}4f4c5de656bf625da7e626fecebfeaf45706462a9f8bb89d4c3d0ee7c4ea1c3cfda48afa51ccde34898121a747e84397'
-#    admin_pwd: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
-#  aes:
-#    secret: '{cipher}5d877912e21eae16343fa5a48a29759230e5fdebbdc849ac894ade49ec2ddbcc68798d7d10f2918e386602e07d8aad7666bcf774629df087391adbac70f7ab77'
-  springdoc:
-    default-produces-media-type: application/json;charset=UTF-8
-    default-consumes-media-type: application/json;charset=UTF-8
-    cache:
-      disabled: true
-    packages-to-scan: org.book.commerce.bookcommerce.domain
-    api-docs:
-      path: /swagger-ui
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/whateverWithMe?useUnicode=true&characterEncoding=UTF-8
-#    username: root
-#    password: '{cipher}c7a5d2bb51e84618c44c8d4d59e13e9192e1d22ab579049eaa5d531e5778b7ac'
   main:
     allow-bean-definition-overriding: true
 

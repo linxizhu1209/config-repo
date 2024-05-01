@@ -32,3 +32,11 @@ spring:
     url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
     username: '{cipher}171ca90a100ba881a970f9c9b33153a0b0ca11f402316f9510fc8ac080bfe789'
     password: '{cipher}50909890a3e2668f070bba38f1e24edfc5efebbb5cae7ca59c895387d4abf590'
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/

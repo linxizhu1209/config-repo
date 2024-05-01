@@ -7,7 +7,7 @@ spring:
   data:
     redis:
       host: 127.0.0.1
-      port: 6379
+      port: 6380
       password: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
       repositories:
         enabled: false

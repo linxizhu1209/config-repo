@@ -28,10 +28,14 @@ spring:
     packages-to-scan: org.book.commerce.bookcommerce.domain
     api-docs:
       path: /swagger-ui
+#  datasource:
+#    url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
+#    username: '{cipher}171ca90a100ba881a970f9c9b33153a0b0ca11f402316f9510fc8ac080bfe789'
+#    password: '{cipher}50909890a3e2668f070bba38f1e24edfc5efebbb5cae7ca59c895387d4abf590'
   datasource:
-    url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
-    username: '{cipher}171ca90a100ba881a970f9c9b33153a0b0ca11f402316f9510fc8ac080bfe789'
-    password: '{cipher}50909890a3e2668f070bba38f1e24edfc5efebbb5cae7ca59c895387d4abf590'
+    url: jdbc:mysql://localhost:3306/whateverWithMe?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: '{cipher}c7a5d2bb51e84618c44c8d4d59e13e9192e1d22ab579049eaa5d531e5778b7ac'
 eureka:
   instance:
     prefer-ip-address: true

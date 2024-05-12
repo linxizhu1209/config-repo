@@ -26,6 +26,12 @@ spring:
           uri: lb://application-order
           predicates:
             - Path=/order/**
+      default-filters:
+        - name: AuthorizationHeaderFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
   data:
     redis:
       host: 127.0.0.1

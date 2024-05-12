@@ -26,6 +26,16 @@ spring:
           uri: lb://application-order
           predicates:
             - Path=/order/**
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6380
+      password: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
+      repositories:
+        enabled: false
+  jwt:
+    secret: '{cipher}741ae6d415c9fd35d0e94529046e30b3e16c12c704490f707a72b8db35c980f7ab32722f4f9714f042e4c06f49882da0682721a5b87b835591c66050cf0d33a573fdb06868c14f204c6ca21c726118b2c2cc72ed7c3a554fc10de3eefdccf0366abc4edfc001575f20905bb20acb8064'
+
 eureka:
   instance:
     prefer-ip-address: true

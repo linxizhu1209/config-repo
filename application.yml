@@ -6,7 +6,7 @@ spring:
       ddl-auto: update
   data:
     redis:
-      host: 127.0.0.1
+      host: ecommerce_redis
       port: 6379
       password: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
       repositories:

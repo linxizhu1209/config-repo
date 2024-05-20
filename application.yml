@@ -20,22 +20,10 @@ spring:
     allow-bean-definition-overriding: true
   aes:
     secret: '{cipher}5d877912e21eae16343fa5a48a29759230e5fdebbdc849ac894ade49ec2ddbcc68798d7d10f2918e386602e07d8aad7666bcf774629df087391adbac70f7ab77'
-#  springdoc:
-#    default-produces-media-type: application/json;charset=UTF-8
-#    default-consumes-media-type: application/json;charset=UTF-8
-#    cache:
-#      disabled: true
-#    packages-to-scan: org.book.commerce.bookcommerce.domain
-#    api-docs:
-#      path: /swagger-ui
   datasource:
     url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
     username: '{cipher}171ca90a100ba881a970f9c9b33153a0b0ca11f402316f9510fc8ac080bfe789'
     password: '{cipher}50909890a3e2668f070bba38f1e24edfc5efebbb5cae7ca59c895387d4abf590'
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/whateverWithMe?useUnicode=true&characterEncoding=UTF-8
-#    username: root
-#    password: '{cipher}c7a5d2bb51e84618c44c8d4d59e13e9192e1d22ab579049eaa5d531e5778b7ac'
 eureka:
   instance:
     prefer-ip-address: true
@@ -44,6 +32,3 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
-server:
-  wait-time-in-ms-when-sync-empty: 5
-  peer-node-read-timeout-ms: 10000

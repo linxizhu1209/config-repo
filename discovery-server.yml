@@ -17,6 +17,7 @@ eureka:
   # 각 서비스들의 등록을 위한 대기시간. 해당 시간동안 대기한 후에 등록된 서비스들의 정보를 공유 (실무에서는 10분정도로 설정,지금은 작은 서비스이므로 5초)
   server:
     wait-time-in-ms-when-sync-empty: 5
+    peer-node-read-timeout-ms: 5000
 # Spring Actuator 관련 설정으로, 액츄에이터의 어떤 API를 사용할 것인지 지정하는 설정.
 management:
   endpoints:

@@ -56,7 +56,7 @@ management:
     port: 8040
   endpoints:
     web:
-      base-path: /secret-actuator
+      base-path: /secret
       exposure:
         include: info, health, metrics
   endpoint:

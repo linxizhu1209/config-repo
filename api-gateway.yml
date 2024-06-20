@@ -52,7 +52,10 @@ eureka:
     serviceUrl:
      defaultZone: http://discovery-server:8761/eureka/
 management:
+  server:
+    port: 1030
   endpoints:
     web:
+      base-path: /secret-actuator
       exposure:
-        include: "*"
+        include: info, health, metrics

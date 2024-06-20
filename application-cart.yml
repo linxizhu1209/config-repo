@@ -9,18 +9,18 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
-#actuator에서 보기위한 설정
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-  health:
-    circuitbreakers:
-      enabled: true
+##actuator에서 보기위한 설정
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
+#  health:
+#    circuitbreakers:
+#      enabled: true
 
 resilience4j:
   circuitbreaker:

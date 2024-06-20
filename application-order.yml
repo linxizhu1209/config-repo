@@ -9,17 +9,17 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-  health:
-    circuitbreakers:
-      enabled: true
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
+#  health:
+#    circuitbreakers:
+#      enabled: true
 
 resilience4j:
   circuitbreaker:

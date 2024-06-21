@@ -61,4 +61,8 @@ resilience4j:
     instances:
       productServiceCircuitBreaker:
         base-config: default
-
+  retry:
+    instances:
+      productServiceRetry:
+        max-attempts: 3        # 최대 재시도 횟수
+        wait-duration: 500ms   # 각 재시도 사이의 대기 시간

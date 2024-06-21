@@ -56,7 +56,10 @@ management:
     web:
       base-path: /secret
       exposure:
-        include: info, health, metrics
+        include: info, health, metrics, circuitbreakers
   endpoint:
     health:
       show-details: always
+  health:
+    circuitbreakers:
+      enabled: true

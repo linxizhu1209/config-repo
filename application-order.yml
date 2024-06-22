@@ -9,17 +9,25 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    health:
-#      show-details: always
-#  health:
-#    circuitbreakers:
-#      enabled: true
+management:
+  endpoints:
+    web:
+      base-path: /secret
+      exposure:
+        include: info, health, metrics, circuitbreakers, prometheus
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+  health:
+    circuitbreakers:
+      enabled: true
+  metrics:
+    enable:
+      resilience4j:
+        circuitbreaker:
+          calls: true
 
 resilience4j:
   circuitbreaker:
@@ -35,6 +43,16 @@ resilience4j:
         minimum-number-of-calls: 10
         wait-duration-in-open-state: 10s
     instances:
-      commerce-circuit-breaker:
+      productServiceCircuitBreaker:
         base-config: default
+      cartServiceCircuitBreaker:
+        base-config: default
+  retry:
+    instances:
+      productServiceRetry:
+        max-attempts: 3        # 최대 재시도 횟수
+        wait-duration: 500ms   # 각 재시도 사이의 대기 시간
+      cartServiceRetry:
+        max-attempts: 3        # 최대 재시도 횟수
+        wait-duration: 500ms   # 각 재시도 사이의 대기 시간
 

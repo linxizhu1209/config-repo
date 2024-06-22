@@ -10,7 +10,21 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
 management:
-  endpoint:
+  endpoints:
     web:
+      base-path: /secret
       exposure:
-        include:"*"
+        include: info, health, metrics, circuitbreakers, prometheus
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+  health:
+    circuitbreakers:
+      enabled: true
+  metrics:
+    enable:
+      resilience4j:
+        circuitbreaker:
+          calls: true

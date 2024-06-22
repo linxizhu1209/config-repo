@@ -56,10 +56,12 @@ management:
     web:
       base-path: /secret
       exposure:
-        include: info, health, metrics, circuitbreakers
+        include: info, health, metrics, circuitbreakers, prometheus
   endpoint:
     health:
       show-details: always
+    prometheus:
+      enabled: true
   health:
     circuitbreakers:
       enabled: true

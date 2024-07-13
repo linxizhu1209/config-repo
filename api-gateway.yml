@@ -3,6 +3,9 @@ spring:
     gateway:
       default-filters:
         - name: AuthorizationHeaderFilter
+
+
+
           args:
             baseMessage: Spring Cloud Gateway Global Filter
             preLogger: true
@@ -50,7 +53,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-     defaultZone: http://discovery-8761-tcp.whatevermall-cluster:8761/eureka/
+     defaultZone: ${EUREKA_URL}
 management:
   endpoints:
     web:

@@ -6,7 +6,7 @@ spring:
       ddl-auto: update
   data:
     redis:
-      host: ecommerce_redis
+      host: ${REDIS_HOST}
       port: 6379
       password: '{cipher}8141d3f392c276e31b4d3ae140a263ba959c8ed5d7b34e85e9ee8af907f6aca6'
       repositories:
@@ -22,8 +22,8 @@ spring:
     secret: '{cipher}5d877912e21eae16343fa5a48a29759230e5fdebbdc849ac894ade49ec2ddbcc68798d7d10f2918e386602e07d8aad7666bcf774629df087391adbac70f7ab77'
   datasource:
     url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
-    username: '{cipher}171ca90a100ba881a970f9c9b33153a0b0ca11f402316f9510fc8ac080bfe789'
-    password: '{cipher}50909890a3e2668f070bba38f1e24edfc5efebbb5cae7ca59c895387d4abf590'
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PWD}
 eureka:
   instance:
     prefer-ip-address: true
@@ -31,4 +31,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/
+      defaultZone: http://discovery-8761-tcp.whatevermall-cluster:8761/eureka/

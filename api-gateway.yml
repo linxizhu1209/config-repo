@@ -12,19 +12,19 @@ spring:
             postLogger: true
       routes:
         - id: user-service
-          uri: lb://application-user
+          uri: lb://APPLICATION-USER
           predicates:
             - Path=/user/**
         - id: auth-service
-          uri: lb://application-user
+          uri: lb://APPLICATION-USER
           predicates:
             - Path=/auth/**
         - id: wish-service
-          uri: lb://application-user
+          uri: lb://APPLICATION-USER
           predicates:
             - Path=/wish/**
         - id: product-service
-          uri: lb://application-product
+          uri: lb://APPLICATION-USER
           predicates:
             - Path=/product/**
         - id: cart-service

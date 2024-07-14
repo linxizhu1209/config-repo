@@ -21,7 +21,7 @@ spring:
   aes:
     secret: '{cipher}5d877912e21eae16343fa5a48a29759230e5fdebbdc849ac894ade49ec2ddbcc68798d7d10f2918e386602e07d8aad7666bcf774629df087391adbac70f7ab77'
   datasource:
-    url: jdbc:mysql://ecommerce-mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${MYSQL_URL}?useSSL=false&allowPublicKeyRetrieval=true
     username: ${MYSQL_USER}
     password: ${MYSQL_PWD}
 eureka:

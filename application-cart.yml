@@ -14,7 +14,6 @@ eureka:
 management:
   endpoints:
     web:
-      base-path: /cart/secret
       exposure:
         include: info, health, metrics, circuitbreakers, prometheus
   endpoint:

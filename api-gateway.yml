@@ -24,15 +24,15 @@ spring:
           predicates:
             - Path=/wish/**
         - id: product-service
-          uri: lb://APPLICATION-USER
+          uri: lb://APPLICATION-PRODUCT
           predicates:
             - Path=/product/**
         - id: cart-service
-          uri: lb://application-cart
+          uri: lb://APPLICATION-CART
           predicates:
             - Path=/cart/**
         - id: order-service
-          uri: lb://application-order
+          uri: lb://APPLICATION-ORDER
           predicates:
             - Path=/order/**
 

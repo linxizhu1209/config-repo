@@ -3,9 +3,6 @@ spring:
     gateway:
       default-filters:
         - name: AuthorizationHeaderFilter
-
-
-
           args:
             baseMessage: Spring Cloud Gateway Global Filter
             preLogger: true
@@ -49,6 +46,7 @@ jwt:
 eureka:
   instance:
     prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: true
     fetch-registry: true

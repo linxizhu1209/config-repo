@@ -51,7 +51,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-     defaultZone: ${EUREKA_URL}
+     defaultZone: http://discovery-8761-tcp.whatevermall-cluster:8761/eureka/
 management:
   endpoints:
     web:

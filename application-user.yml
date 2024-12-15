@@ -21,15 +21,15 @@ spring:
     auth-code-expiration-millis: 1800000
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    ip-address: ${EUREKA_INSTANCE_IP}
+#  instance:
+#    prefer-ip-address: true
+#    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#    ip-address: ${EUREKA_INSTANCE_IP}
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL}
+      defaultZone: http://discovery-8761-tcp.whatevermall-cluster:8761/eureka/
 management:
   endpoints:
     web:
